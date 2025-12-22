@@ -1,21 +1,31 @@
-<form method="post" action="/result.html
-">
-    
-    <label>Ваш возраст:</label><br>
-    <select name="age" required>
-        <option value="18-29">18–29</option>
-        <option value="30-39">30–39</option>
-        <option value="40-49">40–49</option>
-    </select><br><br>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест</title>
+</head>
+<body>
 
-    <label>Главная проблема:</label><br>
-    <select name="answer" required>
-        <option value="energy">Низкий уровень энергии</option>
-        <option value="sleep">Плохой сон</option>
-        <option value="weight">Лишний вес</option>
-    </select><br><br>
+  <label>Ваш возраст:</label><br>
+  <select id="age">
+    <option value="18-29">18–29</option>
+    <option value="30-39">30–39</option>
+    <option value="40-49">40–49</option>
+  </select>
 
-    <button id="submitBtn">Получить результат</button>
-</form>
+  <br><br>
 
+  <label>Главная проблема:</label><br>
+  <select id="problem">
+    <option value="energy">Низкий уровень энергии</option>
+    <option value="sleep">Плохой сон</option>
+  </select>
 
+  <br><br>
+
+  <button id="submitBtn">Получить результат</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
