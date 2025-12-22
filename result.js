@@ -2,33 +2,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const age = localStorage.getItem("age");
   const problem = localStorage.getItem("problem");
 
-  const title = document.getElementById("title");
-  const description = document.getElementById("description");
+  const titleEl = document.getElementById("title");
+  const descEl = document.getElementById("description");
   const btn = document.getElementById("ctaBtn");
+
+  if (!titleEl || !descEl || !btn) {
+    console.error("Не найдены элементы result.html");
+    return;
+  }
 
   // Защита от прямого захода
   if (!age || !problem) {
-    title.innerText = "Пройдите тест";
-    description.innerText =
+    titleEl.innerText = "Пройдите тест";
+    descEl.innerText =
       "Чтобы получить персональное решение, сначала пройдите короткий тест.";
     btn.style.display = "none";
     return;
   }
 
+  // Персонализация
   if (problem === "energy") {
-    title.innerText = "Низкий уровень энергии — это не возраст";
-    description.innerText =
-      "Причина часто связана с перегрузкой мозга. Есть простой способ мягко поддержать концентрацию и энергию.";
+    titleEl.innerText = "Низкий уровень энергии — это не возраст";
+    descEl.innerText =
+      "Ваш организм может терять энергию из-за скрытого дисбаланса. Есть простой способ поддержать мозг и концентрацию.";
+  } else if (problem === "sleep") {
+    titleEl.innerText = "Проблемы со сном — сигнал нервной системы";
+    descEl.innerText =
+      "Плохой сон часто связан с перегрузкой мозга. Есть натуральный способ помочь организму восстановиться.";
   }
 
-  if (problem === "sleep") {
-    title.innerText = "Плохой сон — сигнал нервной системы";
-    description.innerText =
-      "Нарушение сна часто вызвано внутренним дисбалансом. Его можно скорректировать естественным способом.";
-  }
-
+  // Кнопка → партнёрка
   btn.addEventListener("click", function () {
+    localStorage.removeItem("age");
+    localStorage.removeItem("problem");
     window.location.href = "ВСТАВЬ_СЮДА_ПАРТНЕРСКУЮ_ССЫЛКУ";
   });
 });
-
