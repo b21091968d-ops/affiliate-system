@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   btn.addEventListener("click", function () {
     localStorage.removeItem("age");
     localStorage.removeItem("problem");
-    window.location.href = "
-https://84fc3yl6mtgr4z7bqe0d3g5n0i.hop.clickbank.net";
+    window.location.assign("https://84fc3yl6mtgr4z7bqe0d3g5n0i.hop.clickbank.net");
   });
 });
