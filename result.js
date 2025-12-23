@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Персонализация
+  // Персонализация ТОЛЬКО под энергию / сон
   if (problem === "energy") {
     titleEl.innerText = "Низкий уровень энергии — это не лень";
     descEl.innerText =
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "Результаты показывают, что восстановление нарушено.";
   }
 
-  // Кнопка → go.html
+  // 🔒 КНОПКА → ТОЛЬКО go.html
   btn.addEventListener("click", function () {
     window.location.assign("go.html");
   });
