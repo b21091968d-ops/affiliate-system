@@ -2,28 +2,102 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Тест</title>
+
+  <!-- ОБЯЗАТЕЛЬНО для мобильных -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Быстрый тест энергии и сна</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      background: #ffffff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
-  <label>Ваш возраст:</label><br>
-  <select id="age">
-    <option value="18-29">18–29</option>
-    <option value="30-39">30–39</option>
-    <option value="40-49">40–49</option>
-  </select>
+  <div class="container">
+    <h1>Быстрый тест энергии и сна</h1>
 
-  <br><br>
+    <label for="age">Ваш возраст:</label>
+    <select id="age">
+      <option value="18-29">18–29</option>
+      <option value="30-39">30–39</option>
+      <option value="40-49">40–49</option>
+      <option value="50+">50+</option>
+    </select>
 
-  <label>Главная проблема:</label><br>
-  <select id="problem">
-    <option value="energy">Низкий уровень энергии</option>
-    <option value="sleep">Плохой сон</option>
-  </select>
+    <label for="problem">Главная проблема:</label>
+    <select id="problem">
+      <option value="energy">Низкий уровень энергии</option>
+      <option value="sleep">Плохой сон</option>
+      <option value="focus">Плохая концентрация</option>
+    </select>
 
-  <br><br>
+    <button id="submitBtn">Получить результат</button>
 
-  <button id="submitBtn">Получить результат</button>
+    <div class="note">
+      Тест займёт менее 30 секунд
+    </div>
+  </div>
 
   <script src="script.js"></script>
 
