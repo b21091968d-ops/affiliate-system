@@ -2,28 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- ОБЯЗАТЕЛЬНО для мобильных -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Quick Energy & Sleep Quiz</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      background: #ffffff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    select {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Your age:</h2>
-<select id="age">
-  <option value="18-29">18–29</option>
-  <option value="30-39">30–39</option>
-  <option value="40-49">40–49</option>
-</select>
+  <div class="container">
+    <h1>Quick Energy & Sleep Quiz</h1>
 
-<h2>Main issue:</h2>
-<select id="problem">
-  <option value="energy">Low energy</option>
-  <option value="sleep">Poor sleep</option>
-</select>
+    <label for="age">Your age:</label>
+    <select id="age">
+      <option value="18-29">18–29</option>
+      <option value="30-39">30–39</option>
+      <option value="40-49">40–49</option>
+      <option value="50+">50+</option>
+    </select>
 
-<br><br>
+    <label for="problem">Main issue:</label>
+    <select id="problem">
+      <option value="energy">Low energy</option>
+      <option value="sleep">Poor sleep</option>
+      <option value="focus">Low focus</option>
+    </select>
 
-<button id="submitBtn">Get Results</button>
+    <button id="submitBtn">Get Results</button>
 
-<script src="script-en.js"></script>
+    <div class="note">
+      Takes less than 30 seconds
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
