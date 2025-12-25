@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Проверка языка
-  if (localStorage.getItem("lang") !== "en") {
-    window.location.href = "index-en.html";
-    return;
-  }
-
   const age = localStorage.getItem("age");
   const problem = localStorage.getItem("problem");
 
