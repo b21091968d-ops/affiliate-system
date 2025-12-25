@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-  <!-- КЛЮЧЕВОЙ ТЕГ ДЛЯ МОБИЛЬНЫХ -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ОБЯЗАТЕЛЬНО ДЛЯ МОБИЛЬНЫХ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Your Result</title>
+  <title>Your Personalized Result</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #111;
     }
 
     .container {
-      max-width: 420px;
+      max-width: 480px;
       margin: 0 auto;
-      padding: 24px 16px;
+      padding: 24px 18px;
       background: #ffffff;
       min-height: 100vh;
-      text-align: center;
+      box-sizing: border-box;
     }
 
     h1 {
-      font-size: 22px;
+      font-size: 26px;
+      line-height: 1.25;
       margin-bottom: 16px;
     }
 
     p {
-      font-size: 16px;
-      line-height: 1.4;
+      font-size: 17px;
+      line-height: 1.6;
       margin-bottom: 16px;
     }
 
     button {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       font-size: 18px;
       font-weight: bold;
-      background: #2563eb;
+      background: #e63946;
       color: #fff;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: 10px;
+      margin: 20px 0;
     }
 
     button:active {
       transform: scale(0.98);
     }
 
-    .note {
-      margin-top: 16px;
+    .disclaimer {
       font-size: 13px;
-      color: #666;
+      color: #555;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
-    <h1>Your Personalized Result</h1>
+    <h1 id="title">Your Result</h1>
 
-    <p>
-      Based on your answers, your body may need better metabolic and recovery
-      support.
+    <p id="description">
+      Based on your answers, we identified a key factor affecting your energy and recovery.
     </p>
 
-    <button id="ctaBtn">Continue</button>
+    <button id="ctaBtn">
+      Get Your Personalized Solution
+    </button>
 
-    <div class="note">
-      Results may vary. This is not medical advice.
-    </div>
+    <p>
+      The good news: this can often be supported without extreme diets or exhausting workouts.
+    </p>
+
+    <p class="disclaimer">
+      ⚠️ Individual results may vary. This is not medical advice.
+    </p>
   </div>
 
-  <script src="result.js"></script>
-
+  <script src="result-en.js"></script>
 </body>
 </html>
