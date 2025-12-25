@@ -5,5 +5,8 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   localStorage.setItem("age", age);
   localStorage.setItem("problem", problem);
 
+  // фиксируем язык
+  localStorage.setItem("lang", "ru");
+
   window.location.href = "result.html";
 });
