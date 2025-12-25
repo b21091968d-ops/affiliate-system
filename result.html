@@ -2,32 +2,73 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+
+  <!-- ОБЯЗАТЕЛЬНО для мобильных -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Ваш результат</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      background: #ffffff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
 
-<h1 id="title">⚠️ Ваш персональный результат</h1>
+    <h1 id="title"></h1>
+    <p id="description"></p>
 
-<p id="description">
-На основе выбранного возраста и основной проблемы
-обнаружен <strong>ключевой фактор снижения энергии</strong>,
-который чаще всего игнорируют после 30 лет.
-</p>
+    <button id="ctaBtn">Получить персональное решение</button>
 
-<button id="ctaBtn" type="button">
-  Получить персональное решение
-</button>
+    <p class="note">
+      ⚠️ Результаты индивидуальны. Не является медицинской рекомендацией.
+    </p>
 
-<p>
-Хорошая новость — это можно скорректировать
-<strong>без диет, таблеток и изнурительных тренировок</strong>.
-</p>
+  </div>
 
-<p style="margin-top:15px; font-size:13px; color:#555;">
-⚠️ Результаты индивидуальны. Не является медицинской рекомендацией.
-</p>
-
-<script src="result.js"></script>
-
+  <script src="result.js"></script>
 </body>
 </html>
