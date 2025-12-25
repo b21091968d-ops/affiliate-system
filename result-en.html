@@ -2,31 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <!-- КЛЮЧЕВОЙ ТЕГ ДЛЯ МОБИЛЬНЫХ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Your Result</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      background: #ffffff;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1 id="title">Your Personal Result</h1>
+  <div class="container">
+    <h1>Your Personalized Result</h1>
 
-<p id="description">
-Based on your answers, your body may struggle to fully recover
-under constant mental load.
-</p>
+    <p>
+      Based on your answers, your body may need better metabolic and recovery
+      support.
+    </p>
 
-<button id="ctaBtn" type="button">
-Get Personalized Solution
-</button>
+    <button id="ctaBtn">Continue</button>
 
-<p>
-The good news: this can often be supported naturally,
-without extreme diets or exhausting workouts.
-</p>
+    <div class="note">
+      Results may vary. This is not medical advice.
+    </div>
+  </div>
 
-<p style="font-size:13px;color:#555;">
-Results may vary. This is not medical advice.
-</p>
-
-<script src="result-en.js"></script>
+  <script src="result.js"></script>
 
 </body>
 </html>
